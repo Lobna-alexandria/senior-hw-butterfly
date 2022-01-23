@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butterfly</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+
+*{box-sizing: border-box;}
+body{background-color: rgb(226, 236, 226);margin: 0;}
+
+.display-B{display: block;}
+.display-IB{display: inline-block;}
+.display-I{display: inline;}
+.w-60{width:60%;}
+.w-30{width:30%;}
+
+.part {
+    height: 250px;width: 300px;background-color: rgb(226, 86, 168);
+  border:solid rgb(5, 5, 5);
+  padding: 10px;
+    display: inline-block;
+    margin: 10px;
+ position: relative;
+ 
+
+}
+
+.div-all{display:block;width: 60%;border: green solid;border-radius: 50%; background-color: rgb(235, 219, 130); margin: auto;height: 700px;}
+
+</style>
+
+</head>
+<body>
+<section class="div-all" style="margin-top: 2%;" >
+    <div class="display-B" style="padding: 20px;">
+
+          <div class="part" style="transform: rotatey(180deg);height: 350px;"> 2 </div>  <div class="part" style="height: 350px;"> 1  </div>  
+
+    </div>
+
+
+    <div-container class="display-B" style="padding: 20px;">
+
+         <div class="part" style="transform: rotatez(180deg);"> 4    </div> <div class="part" style="transform: rotatex(180deg);">3  </div>  
+
+    </div-container>
+
+</section>
+
+<marquee style="color: blue; font-size: 50px;margin-top: 30px;">Hover To see the Butterfly</marquee>
+
+<script>
+
+$(document).ready(function(){
+ 
+$('.div-all').mousemove(function(){
+    $('.part').css({'transition':'4s','border-top-left-radius':'250px','border-bottom-right-radius':'150px','background-color':'rgb(33, 211, 196)'
+,'box-shadow':'7px -5px 10px 0px #4B0082, 11px -9px 10px 0px #0000FF, 16px -14px 10px 0px #00FF00, 20px -17px 10px 0px #FFFF00, 24px -19px 10px 0px #FF7F00, 27px -23px 10px 0px #FF0000, 5px 5px 15px 5px rgba(0,0,0,0)'
+})
+
+
+})
+
+
+$('.div-all').mouseout(function(){
+$('.part').css({'border-top-left-radius':'0','border-bottom-right-radius':'0',
+'background-color':'rgb(226, 86, 168)','box-shadow':'none','transition':'4s' })
+
+
+
+})
+
+});
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
